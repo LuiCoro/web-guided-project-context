@@ -37,15 +37,12 @@ const SubComp2 = ()=> {
     const [ person, dispatch ] = useContext(PersonContext);
 
     const handleClick =()=> {
-        setPerson({
-            ...person,
-            location: {
-                city: "Philladelphia",
-                state: "PA",
-                postcode: "19111",
-                street: "444 W 55st"
-            }
-        });
+        dispatch(setLocation({
+            city: "Philladelphia",
+            state: "PA",
+            postcode: "19111",
+            street: "444 W 55st"
+        }));
     }
 
     return(<div className="component">
