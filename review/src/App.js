@@ -5,7 +5,7 @@ const App = ()=> {
     const [person, setPerson] = useState(data);
     return(<div className="App component">
         <h1>Main App</h1>
-        <SubComp1 person={person} setState={setPerson}/>
+        <SubComp1 person={person} setPerson={setPerson}/>
     </div>);
 };
 
@@ -21,13 +21,13 @@ const SubComp1 = (props)=> {
         <p>{person.name.first}</p>
         <p>{person.name.last}</p>
 
-        <SubComp2 person={person} setState={setState}/>
+        <SubComp2 person={person} setPerson={setPerson}/>
     </div>);
 }
 
 const SubComp2 = (props)=> {
-    const { person } = props;
-
+    const { person, setPerson } = props;
+    console.log(person);
     const handleClick =()=> {
         
     }
