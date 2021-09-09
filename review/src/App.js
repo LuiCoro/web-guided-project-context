@@ -5,7 +5,7 @@ const App = ()=> {
     const [person, setPerson] = useState(data);
     return(<div className="App component">
         <h1>Main App</h1>
-        <SubComp1 person={person}/>
+        <SubComp1 person={person} setState={setPerson}/>
     </div>);
 };
 
@@ -13,15 +13,15 @@ export default App;
 
 
 const SubComp1 = (props)=> {
-    const { person } = props;
-    console.log(person);
+    const { person, setState } = props;
+    
     return(<div className="component">
         <h1>Sub Comp 1</h1>
         <p>{person.name.title}</p>
         <p>{person.name.first}</p>
         <p>{person.name.last}</p>
 
-        <SubComp2 person={person}/>
+        <SubComp2 person={person} setState={setState}/>
     </div>);
 }
 
@@ -30,6 +30,7 @@ const SubComp2 = (props)=> {
 
     return(<div className="component">
         <h1>Sub Comp 2</h1>
+        <button>Change Location</button>
         <SubComp3 person={person}/>
     </div>);
 }
