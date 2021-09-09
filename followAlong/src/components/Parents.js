@@ -3,8 +3,7 @@ import FamilyContext from './../contexts/FamilyContext';
 
 const Parents = () => {
   const family = useContext(FamilyContext);
-
-  console.log(family);
+  
   return (
     <section className="parents">
       {

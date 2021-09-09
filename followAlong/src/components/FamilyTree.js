@@ -16,10 +16,10 @@ export default function FamilyTree() {
       <Parents />
 
       {/* <div className="spacer" /> */}
-      {/* <h2>Siblings</h2> */}
+      <h2>Siblings</h2>
 
       {/* Siblings will consume data from Context using render props */}
-      {/* <Siblings family={family} /> */}
+      <Siblings family={family} />
     </section>
   );
 }
