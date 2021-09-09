@@ -17,10 +17,8 @@ const App = ()=> {
 export default App;
 
 
-const SubComp1 = (props)=> {
-    // const { person, setPerson } = props;
+const SubComp1 = ()=> {
     const [ person ] = useContext(PersonContext);
-
 
     return(<div className="component">
         <h1>Sub Comp 1</h1>
@@ -28,7 +26,7 @@ const SubComp1 = (props)=> {
         <p>{person.name.first}</p>
         <p>{person.name.last}</p>
 
-        {/* <SubComp2/> */}
+        <SubComp2/>
     </div>);
 }
 
