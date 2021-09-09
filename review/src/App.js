@@ -43,17 +43,22 @@ const SubComp2 = (props)=> {
     return(<div className="component">
         <h1>Sub Comp 2</h1>
         <button onClick={handleClick}>Change Location</button>
-        <SubComp3 person={person}/>
+        <SubComp3 person={person} setPerson={setPerson}/>
     </div>);
 }
 
 const SubComp3 = (props)=> {
-    const { person } = props;
+    const { person, setPerson } = props;
+
+    const handleClick = ()=> {
+
+    }
 
     return(<div className="component">
         <p>
         {person.location.street} {person.location.city}, {person.location.state}
         </p>
+        <button onClick={handleClick}>Change Name</button>
         <h1>Sub Comp 3</h1>
     </div>);
 }
