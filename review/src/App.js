@@ -2,8 +2,6 @@ import React, {useState, createContext, useContext} from 'react';
 import data from './data';
 
 const PersonContext = createContext();
-const DogContext = createContext();
-
 
 const App = ()=> {
     const [person, setPerson] = useState(data);
@@ -33,24 +31,23 @@ const SubComp1 = ()=> {
 }
 
 const SubComp2 = ()=> {
-    // const [ person, setPerson ] = useContext(PersonContext);
+    const [ person, setPerson ] = useContext(PersonContext);
 
-    // const handleClick =()=> {
-    //     setPerson({
-    //         ...person,
-    //         location: {
-    //             city: "Philladelphia",
-    //             state: "PA",
-    //             postcode: "19111",
-    //             street: "444 W 55st"
-    //         }
-    //     });
-    // }
+    const handleClick =()=> {
+        setPerson({
+            ...person,
+            location: {
+                city: "Philladelphia",
+                state: "PA",
+                postcode: "19111",
+                street: "444 W 55st"
+            }
+        });
+    }
 
     return(<div className="component">
         <h1>Sub Comp 2</h1>
-        {/* <p>Dog's Name is {name}.</p> */}
-        {/* <button onClick={handleClick}>Change Location</button> */}
+        <button onClick={handleClick}>Change Location</button>
         <SubComp3/>
     </div>);
 }
