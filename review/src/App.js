@@ -6,9 +6,11 @@ import data from './data';
 const PersonContext = createContext();
 
 const App = ()=> {
-    const [person, setPerson] = useState(data);
-
-    return(<PersonContext.Provider value={[person, setPerson]}>
+    // const [person, setPerson] = useState(data);
+    const [person, dispatch] = useReducer(initialState);
+    console.log(person);
+    
+    return(<PersonContext.Provider value={[person, dispatch]}>
         <div className="App component">
             <h1>Main App</h1>
             <SubComp1/>
