@@ -9,7 +9,6 @@ export default function FamilyTree() {
 
   return (
     <section className="FamilyTree">
-      <h1>here</h1>
       {/* <h1>{family.familyName}</h1>
       <h2>Parents</h2> */}
 
