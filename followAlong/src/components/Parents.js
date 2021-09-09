@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import FamilyContext from '../contexts/FamilyContext';
+import FamilyContext from './../contexts/FamilyContext';
 
 const Parents = props => {
   const family = useContext(FamilyContext);
