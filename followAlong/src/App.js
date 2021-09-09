@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FamilyContext from './contexts/FamilyContext';
+import { Provider } from './contexts/FamilyContext';
 
 import { data } from "./data";
 
@@ -27,9 +27,9 @@ export default function App() {
         ))}
       </section>
 
-      <FamilyContext.Provider value={activeFamily}>
+      <Provider value={activeFamily}>
         {activeFamily && <FamilyTree />}
-      </FamilyContext.Provider>
+      </Provider>
     </div>
   );
 }
