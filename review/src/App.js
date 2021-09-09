@@ -29,12 +29,12 @@ const SubComp1 = ()=> {
         <p>{person.name.first}</p>
         <p>{person.name.last}</p>
 
-        {/* <SubComp2/> */}
+        <SubComp2/>
     </div>);
 }
 
 const SubComp2 = ()=> {
-    const [ person, setPerson ] = useContext(PersonContext);
+    const [ person, dispatch ] = useContext(PersonContext);
 
     const handleClick =()=> {
         setPerson({
@@ -51,7 +51,7 @@ const SubComp2 = ()=> {
     return(<div className="component">
         <h1>Sub Comp 2</h1>
         <button onClick={handleClick}>Change Location</button>
-        <SubComp3/>
+        {/* <SubComp3/> */}
     </div>);
 }
 
