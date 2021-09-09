@@ -5,10 +5,11 @@ const PersonContext = createContext();
 
 const App = ()=> {
     const [person, setPerson] = useState(data);
+
     return(<PersonContext.Provider value={[person, setPerson]}>
         <div className="App component">
             <h1>Main App</h1>
-            <SubComp1 person={person} setPerson={setPerson}/>
+            <SubComp1/>
         </div>
     </PersonContext.Provider>);
 };
@@ -25,7 +26,7 @@ const SubComp1 = (props)=> {
         <p>{person.name.first}</p>
         <p>{person.name.last}</p>
 
-        <SubComp2 person={person} setPerson={setPerson}/>
+        {/* <SubComp2/> */}
     </div>);
 }
 
@@ -47,7 +48,7 @@ const SubComp2 = (props)=> {
     return(<div className="component">
         <h1>Sub Comp 2</h1>
         <button onClick={handleClick}>Change Location</button>
-        <SubComp3 person={person} setPerson={setPerson}/>
+        <SubComp3/>
     </div>);
 }
 
