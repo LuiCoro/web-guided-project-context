@@ -29,7 +29,15 @@ const SubComp2 = (props)=> {
     const { person, setPerson } = props;
     console.log(person);
     const handleClick =()=> {
-        
+        setPerson({
+            ...person,
+            location: {
+                city: "Philladelphia",
+                state: "PA",
+                postcode: "19111",
+                street: "444 W 55st"
+            }
+        });
     }
 
     return(<div className="component">
