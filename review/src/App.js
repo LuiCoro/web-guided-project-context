@@ -23,7 +23,6 @@ export default App;
 
 const SubComp1 = ()=> {
     const [ person,  setPerson ] = useContext(PersonContext);
-
     return(<div className="component">
         <h1>Sub Comp 1</h1>
         <p>{person.name.title}</p>
@@ -36,7 +35,8 @@ const SubComp1 = ()=> {
 
 const SubComp2 = ()=> {
     const [ person, setPerson ] = useContext(PersonContext);
-    
+    const name = useContext(DogContext);
+
     const handleClick =()=> {
         setPerson({
             ...person,
@@ -51,6 +51,7 @@ const SubComp2 = ()=> {
 
     return(<div className="component">
         <h1>Sub Comp 2</h1>
+        <p>Dog's Name is {name}</p>
         <button onClick={handleClick}>Change Location</button>
         <SubComp3/>
     </div>);
