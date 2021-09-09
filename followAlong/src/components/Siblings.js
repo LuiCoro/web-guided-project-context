@@ -2,10 +2,13 @@ import React, { useContext } from "react";
 import FamilyContext from './../contexts/FamilyContext';
 
 const Siblings = () => {
-  const family = useContext(FamilyContext);
+  // const family = useContext(FamilyContext);
 
   return (
     <section className="parents">
+      <FamilyContext.Consumer>
+        
+      </FamilyContext.Consumer>
 
       {/* {family.siblings.map((p) => (
         <div className="person" key={p.name}>
