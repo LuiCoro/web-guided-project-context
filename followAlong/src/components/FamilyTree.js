@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import FamilyContext from './../contexts/FamilyContext';
+import FamilyContext from './contexts/FamilyContext';
 
 import Parents from "./Parents";
 import Siblings from "./Siblings";
@@ -13,7 +13,7 @@ export default function FamilyTree() {
       <h2>Parents</h2>
 
       {/* Pass data down as a prop */}
-      <Parents family={family} />
+      <Parents />
 
       <div className="spacer" />
       <h2>Siblings</h2>
