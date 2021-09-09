@@ -1,4 +1,4 @@
-import React, {useState, createContext} from 'react';
+import React, {useState, createContext, useContext} from 'react';
 import data from './data';
 
 const PersonContext = createContext();
@@ -19,7 +19,9 @@ export default App;
 
 const SubComp1 = (props)=> {
     // const { person, setPerson } = props;
-    
+    const [ person ] = useContext(PersonContext);
+
+
     return(<div className="component">
         <h1>Sub Comp 1</h1>
         <p>{person.name.title}</p>
