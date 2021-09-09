@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Provider } from './contexts/FamilyContext';
+import FamilyContext from './contexts/FamilyContext';
 
 import { data } from "./data";
 
@@ -7,6 +7,8 @@ import FamilyTree from "./components/FamilyTree";
 import "./styles.scss";
 
 export default function App() {
+  const { Provider } = FamilyContext;
+
   const [families] = useState(data);
   const [activeFamily, setActiveFamily] = useState(families[0]);
 
