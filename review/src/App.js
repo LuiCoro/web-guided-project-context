@@ -18,7 +18,7 @@ export default App;
 
 
 const SubComp1 = (props)=> {
-    const { person, setPerson } = props;
+    // const { person, setPerson } = props;
     
     return(<div className="component">
         <h1>Sub Comp 1</h1>
