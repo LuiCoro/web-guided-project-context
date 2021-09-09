@@ -24,6 +24,7 @@ export default function App() {
           </button>
         ))}
       </section>
+      
       {activeFamily && <FamilyTree family={activeFamily} />}
     </div>
   );
