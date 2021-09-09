@@ -51,7 +51,7 @@ const SubComp2 = ()=> {
 
     return(<div className="component">
         <h1>Sub Comp 2</h1>
-        <p>Dog's Name is {name}</p>
+        <p>Dog's Name is {name}.</p>
         <button onClick={handleClick}>Change Location</button>
         <SubComp3/>
     </div>);
