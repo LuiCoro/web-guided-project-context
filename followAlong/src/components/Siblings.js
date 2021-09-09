@@ -9,12 +9,16 @@ const Siblings = () => {
       <FamilyContext.Consumer>
         {
           (family)=> {
-            return {family.siblings.map((p) => (
-              <div className="person" key={p.name}>
-                <img width="150" src={p.img} alt={p.name} />
-                <strong>{p.name}</strong>
-              </div>
-            ))}
+            return <div>
+              {
+                family.siblings.map((p) => (
+                  <div className="person" key={p.name}>
+                    <img width="150" src={p.img} alt={p.name} />
+                    <strong>{p.name}</strong>
+                  </div>
+                ))
+              }
+            </div>
           }
         }
       </FamilyContext.Consumer>
