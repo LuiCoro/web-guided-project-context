@@ -14,7 +14,7 @@ export default function App() {
 
   return(
     <div className="App">
-    here
+      <h1>Family Trees</h1>
   </div>);
 }
 
