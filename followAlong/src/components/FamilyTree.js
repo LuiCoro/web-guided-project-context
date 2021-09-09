@@ -9,17 +9,18 @@ export default function FamilyTree() {
 
   return (
     <section className="FamilyTree">
-      <h1>{family.familyName}</h1>
-      <h2>Parents</h2>
+      <h1>here</h1>
+      {/* <h1>{family.familyName}</h1>
+      <h2>Parents</h2> */}
 
       {/* Pass data down as a prop */}
-      <Parents />
+      {/* <Parents /> */}
 
-      <div className="spacer" />
-      <h2>Siblings</h2>
+      {/* <div className="spacer" /> */}
+      {/* <h2>Siblings</h2> */}
 
       {/* Siblings will consume data from Context using render props */}
-      <Siblings family={family} />
+      {/* <Siblings family={family} /> */}
     </section>
   );
 }
