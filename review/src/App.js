@@ -7,7 +7,7 @@ const PersonContext = createContext();
 const App = ()=> {
     const [person, setPerson] = useState(data);
 
-    return(<PersonContext.Provider value={[person, setPerson]}>
+    return(<PersonContext.Provider value={[person, setPerson, "warren", "longmire", 33]}>
         <div className="App component">
             <h1>Main App</h1>
             <SubComp1/>
@@ -19,7 +19,7 @@ export default App;
 
 
 const SubComp1 = ()=> {
-    const [ person,  setPerson, otherStuff ] = useContext(PersonContext);
+    const [ null,  null, name ] = useContext(PersonContext);
 
     return(<div className="component">
         <h1>Sub Comp 1</h1>
