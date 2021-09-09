@@ -12,7 +12,7 @@ export default function App() {
   const [activeFamily, setActiveFamily] = useState(families[0]);
 
   return (
-    <FamilyContext.Provider>
+    
     <div className="App">
       <section className="header">
         <h1>Family Trees</h1>
@@ -28,8 +28,9 @@ export default function App() {
         ))}
       </section>
 
-      {activeFamily && <FamilyTree family={activeFamily} />}
+      <FamilyContext.Provider value={activeFamily}>
+        {activeFamily && <FamilyTree />}
+      </FamilyContext.Provider>
     </div>
-    </FamilyContext.Provider>
   );
 }
