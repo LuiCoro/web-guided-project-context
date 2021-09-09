@@ -17,12 +17,15 @@ const SubComp1 = (props)=> {
     console.log(person);
     return(<div className="component">
         <h1>Sub Comp 1</h1>
-        <p></p>
-        <SubComp2/>
+        <p>{person.name.title}</p>
+        <p>{person.name.first}</p>
+        <p>{person.name.last}</p>
+
+        <SubComp2 person={person}/>
     </div>);
 }
 
-const SubComp2 = ()=> {
+const SubComp2 = (props)=> {
     return(<div className="component">
         <h1>Sub Comp 2</h1>
         <SubComp3/>
