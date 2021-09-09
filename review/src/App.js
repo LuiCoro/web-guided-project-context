@@ -48,12 +48,12 @@ const SubComp2 = ()=> {
     return(<div className="component">
         <h1>Sub Comp 2</h1>
         <button onClick={handleClick}>Change Location</button>
-        {/* <SubComp3/> */}
+        <SubComp3/>
     </div>);
 }
 
 const SubComp3 = (props)=> {
-    const [ person, setPerson ] = useContext(PersonContext);
+    const [ person, dispatch ] = useContext(PersonContext);
 
     const handleClick = ()=> {
         setPerson({
