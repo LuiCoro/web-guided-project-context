@@ -13,7 +13,7 @@ export const setLocation = (location) => {
 
 export const initialState = data;
 
-export const reducer = (state, action)=>{
+const reducer = (state, action)=>{
     switch(action.type) {
         case(SET_NAME):
             return({...state, name:action.payload});
@@ -24,3 +24,4 @@ export const reducer = (state, action)=>{
     }
 
 }
+export default reducer;
