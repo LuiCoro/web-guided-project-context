@@ -7,9 +7,9 @@ const PersonContext = createContext();
 
 const App = ()=> {
     // const [person, setPerson] = useState(data);
-    const [person, dispatch] = useReducer(initialState);
+    const [person, dispatch] = useReducer(reducer, initialState);
     console.log(person);
-    
+
     return(<PersonContext.Provider value={[person, dispatch]}>
         <div className="App component">
             <h1>Main App</h1>
