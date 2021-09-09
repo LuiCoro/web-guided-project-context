@@ -1,5 +1,6 @@
 import React, {useState, useReducer, createContext, useContext} from 'react';
-import reducer, {initialState, }
+import reducer, {initialState, setName, setLocation} from './reducer';
+
 import data from './data';
 
 const PersonContext = createContext();
