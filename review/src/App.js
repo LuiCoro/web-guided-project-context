@@ -8,7 +8,6 @@ const PersonContext = createContext();
 const App = ()=> {
     // const [person, setPerson] = useState(data);
     const [person, dispatch] = useReducer(reducer, initialState);
-    console.log(person);
 
     return(<PersonContext.Provider value={[person, dispatch]}>
         <div className="App component">
@@ -30,7 +29,7 @@ const SubComp1 = ()=> {
         <p>{person.name.first}</p>
         <p>{person.name.last}</p>
 
-        <SubComp2/>
+        {/* <SubComp2/> */}
     </div>);
 }
 
