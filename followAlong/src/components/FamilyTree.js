@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import FamilyContext from './contexts/FamilyContext';
+import FamilyContext from './../contexts/FamilyContext';
 
 import Parents from "./Parents";
 import Siblings from "./Siblings";
