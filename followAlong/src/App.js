@@ -7,10 +7,10 @@ import FamilyTree from "./components/FamilyTree";
 import "./styles.scss";
 
 export default function App() {
-  const { Provider } = FamilyContext;
+  // const { Provider } = FamilyContext;
 
-  const [families] = useState(data);
-  const [activeFamily, setActiveFamily] = useState(families[0]);
+  // const [families] = useState(data);
+  // const [activeFamily, setActiveFamily] = useState(families[0]);
 
   return (
     
