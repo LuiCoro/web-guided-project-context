@@ -6,7 +6,6 @@ import data from './data';
 const PersonContext = createContext();
 
 const App = ()=> {
-    // const [person, setPerson] = useState(data);
     const [person, dispatch] = useReducer(reducer, initialState);
 
     return(<PersonContext.Provider value={[person, dispatch]}>
