@@ -12,9 +12,12 @@ const App = ()=> {
 export default App;
 
 
-const SubComp1 = ()=> {
+const SubComp1 = (props)=> {
+    const { person } = props;
+    console.log(person);
     return(<div className="component">
         <h1>Sub Comp 1</h1>
+        <p></p>
         <SubComp2/>
     </div>);
 }
