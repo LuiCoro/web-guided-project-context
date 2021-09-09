@@ -14,7 +14,9 @@ export default function App() {
 
   return(
     <div className="App">
-      <h1>Family Trees</h1>
+      <section className="header">
+        <h1>Family Trees</h1>
+      </section>
   </div>);
 }
 
