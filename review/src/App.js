@@ -62,10 +62,11 @@ const SubComp3 = (props)=> {
     }
 
     return(<div className="component">
+        <h1>Sub Comp 3</h1>
         <p>
         {person.location.street} {person.location.city}, {person.location.state}
         </p>
         <button onClick={handleClick}>Change Name</button>
-        <h1>Sub Comp 3</h1>
+        
     </div>);
 }
