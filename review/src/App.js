@@ -13,7 +13,7 @@ export default App;
 
 
 const SubComp1 = (props)=> {
-    const { person, setState } = props;
+    const { person, setPerson } = props;
     
     return(<div className="component">
         <h1>Sub Comp 1</h1>
@@ -28,9 +28,13 @@ const SubComp1 = (props)=> {
 const SubComp2 = (props)=> {
     const { person } = props;
 
+    const handleClick =()=> {
+        
+    }
+
     return(<div className="component">
         <h1>Sub Comp 2</h1>
-        <button>Change Location</button>
+        <button onClick={handleClick}>Change Location</button>
         <SubComp3 person={person}/>
     </div>);
 }
