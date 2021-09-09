@@ -6,7 +6,17 @@ import { data } from "./data";
 import FamilyTree from "./components/FamilyTree";
 import "./styles.scss";
 
+export default function App() {
+  const { Provider } = FamilyContext;
 
+  const [families] = useState(data);
+  const [activeFamily, setActiveFamily] = useState(families[0]);
+
+  return(
+    <div className="App">
+    here
+  </div>);
+}
 
 // export default function App() {
 //   // const { Provider } = FamilyContext;
